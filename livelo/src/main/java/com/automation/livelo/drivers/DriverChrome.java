@@ -21,7 +21,10 @@ public class DriverChrome {
 	}
 
 	public static void finalizarDriver() {
-		driver.quit();
+		if (driver != null) {
+			driver.quit();
+			driver = null;
+		}
 
 	}
 
